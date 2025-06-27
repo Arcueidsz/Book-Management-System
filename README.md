@@ -1,2 +1,3 @@
 # Book-Management-System
-a simple book management system based on opengauss
+A Simple Book Management System Based On OpenGauss
+To begin, just
