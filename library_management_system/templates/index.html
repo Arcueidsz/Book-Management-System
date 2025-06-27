@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+        <h1 class="display-4 mb-4">欢迎使用图书管理系统</h1>
+        <p class="lead mb-4">这是一个简单而强大的图书管理系统，帮助您轻松管理图书资源。</p>
+        
+        {% if session.get('user_id') %}
+        <div class="d-grid gap-2 col-md-6 mx-auto">
+            <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg">进入图书管理</a>
+        </div>
+        {% else %}
+        <div class="d-grid gap-2 col-md-6 mx-auto">
+            <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg">登录</a>
+            <a href="{{ url_for('register') }}" class="btn btn-outline-primary btn-lg">注册</a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %} 
